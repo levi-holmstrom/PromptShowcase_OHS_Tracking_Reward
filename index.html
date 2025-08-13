@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OH&S Posture Rewards & Analytics System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/heroicons/2.0.18/outline.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1a1a1a;
+            color: #e5e7eb;
+        }
+        .section {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 3rem 1rem;
+        }
+        .prompt-card {
+            background-color: #2d2d2d;
+            border-radius: 0.75rem;
+            padding: 2rem;
+            margin-bottom: 3rem;
+            border: 1px solid #10b981;
+        }
+        .step-card {
+            background-color: #2d2d2d;
+            border-radius: 0.75rem;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        .step-card::after {
+            content: '';
+            display: block;
+            width: 2px;
+            height: 40px;
+            background-color: #10b981;
+            position: absolute;
+            bottom: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .step-card:last-child::after {
+            display: none;
+        }
+        .code-snippet {
+            background-color: #1f2937;
+            color: #e5e7eb;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+            white-space: pre-wrap;
+        }
+        .highlight {
+            color: #10b981;
+            font-weight: bold;
+        }
+        .icon {
+            width: 2rem;
+            height: 2rem;
+            color: #10b981;
+            margin-right: 1rem;
+        }
+        .flow-title {
+            display: flex;
+            align-items: center;
+        }
+        .prompt-content ul {
+            list-style-type: disc;
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+        .prompt-content ul ul {
+            list-style-type: circle;
+            margin-left: 2rem;
+        }
+        .prompt-content strong {
+            color: #10b981;
+        }
+    </style>
+</head>
+<body>
+    <div class="section">
+        <!-- Prompt Section -->
+        <div class="prompt-card">
+            <div class="flow-title">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-3-3v6m-9 3h18a2 2 0 002-2V6a2 2 0 00-2-2H3a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                <h2 class="text-2xl font-semibold text-white mb-4">Prompt Used to Generate This Showcase</h2>
+            </div>
+            <p class="text-gray-300 mb-4">
+                The following prompt was used to create this web application, designed to showcase an innovative OH&S posture-tracking rewards system:
+            </p>
+            <div class="prompt-content text-gray-300">
+                <p>Create a single-page HTML/CSS web application showcasing an AI-powered Occupational Health and Safety (OH&S) posture-tracking rewards system for desk workers to improve company performance by encouraging ergonomic posture.</p>
+                <ul>
+                    <li><strong>System Overview:</strong>
+                        <ul>
+                            <li><strong>Technologies:</strong>
+                                <ul>
+                                    <li>MediaPipe: Real-time joint tracking (shoulders, elbows, neck) via webcam.</li>
+                                    <li>Grok (xAI API): Posture feedback, ~$0.10-$0.20 per analysis, 0.8 detection confidence threshold.</li>
+                                    <li>Pandas: Calculates employee stats (sitting time, correct posture time, compliance rate, points at 1 point per compliant hour).</li>
+                                    <li>Selenium: Updates intranet dashboards.</li>
+                                    <li>Power Automate: Sends alerts and reward messages.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Focus:</strong> Generate personalized reward messages with ChatGPT, including stats (e.g., sitting time, correct posture time, compliance rate, points) to engage employees.</li>
+                            <li><strong>Business Analytics:</strong> Highlight potential reductions in:
+                                <ul>
+                                    <li>Absenteeism (fewer sick days).</li>
+                                    <li>Healthcare costs.</li>
+                                    <li>Furniture replacement.</li>
+                                    <li>Workers’ compensation claims.</li>
+                                    <li>Employee turnover.</li>
+                                    <li>Legal liabilities.</li>
+                                    <li>Productivity losses.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><strong>Design Requirements:</strong>
+                        <ul>
+                            <li><strong>Theme:</strong> Modern, dark theme with:
+                                <ul>
+                                    <li>Black background (#1a1a1a).</li>
+                                    <li>White text (#e5e7eb).</li>
+                                    <li>Green accents (#10b981) for highlights.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Styling:</strong> Use Tailwind CSS and Heroicons (outline style) for placeholder icons.</li>
+                            <li><strong>Layout:</strong> Flowchart structure with vertical connecting arrows (2px wide, green) between sections, creating a narrative-driven story.</li>
+                            <li><strong>Section Format:</strong> Each section in a card (background #2d2d2d, rounded corners, shadow) with an icon aligned with the title.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Content Requirements:</strong>
+                        <ul>
+                            <li><strong>Header:</strong>
+                                <ul>
+                                    <li>Title: "The Future of Workplace Wellness: OH&S Posture Rewards".</li>
+                                    <li>Intro: Frame the system as a transformative solution for workplace health and cost savings.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Step 1: Personalized Reward Messages:</strong>
+                                <ul>
+                                    <li>Describe ChatGPT’s role in generating engaging messages with stats (e.g., 6 hours sitting, 5.2 hours correct posture, 87% compliance, 52 points).</li>
+                                    <li>Include example prompt and output, emphasizing motivation and rewards (e.g., $10 gift card).</li>
+                                    <li>Highlight insight: Stats-driven messages boost engagement.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Step 2: Posture Tracking:</strong>
+                                <ul>
+                                    <li>Describe MediaPipe’s real-time joint tracking with 0.8 detection threshold, logging data.</li>
+                                    <li>Include Python code snippet for tracking logic, emphasizing cost efficiency (~$0.10-$0.20 per analysis).</li>
+                                </ul>
+                            </li>
+                            <li><strong>Step 3: Analytics and Rewards:</strong>
+                                <ul>
+                                    <li>Detail Pandas’ role in calculating stats, points, and potential business benefits.</li>
+                                    <li>Include code snippet for analytics, avoiding hard figures.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Step 4: Dashboard Updates:</strong>
+                                <ul>
+                                    <li>Explain Selenium’s role in updating dashboards with stats and business benefits.</li>
+                                    <li>Include code snippet.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Step 5: Automated Notifications:</strong>
+                                <ul>
+                                    <li>Describe Power Automate’s role in sending alerts and reward messages.</li>
+                                    <li>Include example flow.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Step 6: AI Chaining:</strong>
+                                <ul>
+                                    <li>Explain integration of MediaPipe, Grok, Pandas, Selenium, and Power Automate, with Grok generating HR reports on potential savings.</li>
+                                    <li>Include code snippet.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Conclusion:</strong>
+                                <ul>
+                                    <li>Summarize cost reductions and performance improvements, tying to the developer’s innovative perspective from self-directed learning.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><strong>Narrative:</strong>
+                        <ul>
+                            <li>Frame content as a story, guiding viewers from employee engagement to business impact, emphasizing potential cost reductions and productivity gains.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Technical Notes:</strong>
+                        <ul>
+                            <li>Ensure code snippets are realistic, reflecting MediaPipe’s joint tracking, Pandas’ data processing, Selenium’s automation, and Grok’s API calls.</li>
+                            <li>Highlight subscription model scalability (e.g., supporting 50,000 users) and error handling (e.g., detection threshold to avoid invalid analyses).</li>
+                        </ul>
+                    </li>
+                    <li><strong>Output:</strong>
+                        <ul>
+                            <li>Deliver a complete HTML/CSS file using Tailwind CSS and Heroicons, with a cohesive, modern design that tells a compelling story about the OH&S rewards system’s impact.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Main Showcase -->
+        <h1 class="text-4xl font-bold text-center mb-8 text-white">The Future of Workplace Wellness: OH&S Posture Rewards</h1>
+        <p class="text-lg text-gray-400 mb-12 text-center">
+            Imagine a workplace where employees thrive, injuries plummet, and costs shrink—all powered by AI-driven posture tracking and a gamified rewards system. Follow this journey to see how it transforms your business.
+        </p>
+
+        <!-- Step 1: Personalized Reward Messages -->
+        <div class="step-card">
+            <div class="flow-title">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
+                </svg>
+                <h2 class="text-2xl font-semibold text-white mb-4">Step 1: Engage Employees with Personalized Rewards</h2>
+            </div>
+            <p class="text-gray-300 mb-4">
+                ChatGPT crafts personalized reward messages using employee stats like sitting time, correct posture time, and compliance rate, making every worker feel valued and motivated to stay ergonomic.
+            </p>
+            <p class="text-gray-300 mb-4">
+                <span class="highlight">Example Prompt:</span> "Write a 100-word email for [Employee Name] who sat for 6 hours, maintained correct posture for 5.2 hours, achieved 87% compliance, and earned 52 points. Use a friendly tone and mention rewards like a $10 gift card."
+            </p>
+            <p class="text-gray-300">
+                <span class="highlight">Example Output:</span> "Hey [Employee Name], You're killing it! This week, you sat for 6 hours, nailed perfect posture for 5.2 hours (87% compliance), and racked up 52 points—enough for a $10 gift card! Keep rocking that ergonomic vibe to stay healthy and earn more perks!"
+            </p>
+            <p class="text-gray-300">
+                <span class="highlight">Story Impact:</span> Personalized messages boost engagement, fostering a culture of wellness and reducing posture-related complaints.
+            </p>
+        </div>
+
+        <!-- Step 2: Real-Time Posture Tracking -->
+        <div class="step-card">
+            <div class="flow-title">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                </svg>
+                <h2 class="text-2xl font-semibold text-white mb-4">Step 2: Monitor Posture with Precision</h2>
+            </div>
+            <p class="text-gray-300 mb-4">
+                MediaPipe tracks joint positions in real-time via webcam, logging data for analysis. Grok provides feedback, ensuring employees maintain optimal angles with minimal API costs.
+            </p>
+            <div class="code-snippet">
+import mediapipe as mp
+import cv2
+import time
+
+mp_pose = mp.solutions.pose
+pose = mp_pose.Pose(min_detection_confidence=0.8)
+
+cap = cv2.VideoCapture(0)
+start_time = time.time()
+posture_log = []
+
+while cap.isOpened():
+    ret, frame = cap.read()
+    if not ret:
+        break
+    image = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+    results = pose.process(image)
+    
+    if results.pose_landmarks:
+        landmarks = results.pose_landmarks.landmark
+        shoulder_angle = calculate_angle(landmarks[mp_pose.PoseLandmark.LEFT_SHOULDER],
+                                        landmarks[mp_pose.PoseLandmark.LEFT_ELBOW],
+                                        landmarks[mp_pose.PoseLandmark.LEFT_WRIST])
+        spine_angle = calculate_spine_angle(landmarks)
+        current_time = time.time() - start_time
+        is_compliant = shoulder_angle >= 80 and shoulder_angle <= 100 and abs(spine_angle) <= 10
+        posture_log.append({'timestamp': current_time, 'shoulder_angle': shoulder_angle, 
+                           'spine_angle': spine_angle, 'compliant': is_compliant})
+        
+        if not is_compliant:
+            cv2.putText(frame, "Adjust posture: Elbows at 90°, spine straight", (50, 50), 
+                        cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
+    
+    cv2.imshow('Posture Tracker', frame)
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+
+cap.release()
+cv2.destroyAllWindows()
+            </div>
+            <p class="text-gray-300 mt-4">
+                <span class="highlight">Story Impact:</span> Precise tracking (0.8 detection threshold, as in your gym app) ensures reliable data, reducing injury risks and setting the stage for analytics.
+            </p>
+        </div>
+
+        <!-- Step 3: Analytics for Rewards and Business Impact -->
+        <div class="step-card">
+            <div class="flow-title">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                </svg>
+                <h2 class="text-2xl font-semibold text-white mb-4">Step 3: Calculate Rewards and Business Impact</h2>
+            </div>
+            <p class="text-gray-300 mb-4">
+                Pandas analyzes posture data to calculate employee stats (sitting time, correct posture time, points) and estimate potential cost reductions in multiple areas.
+            </p>
+            <div class="code-snippet">
+import pandas as pd
+
+# Load posture data
+data = pd.read_csv('posture_data.csv')  # Columns: employee_id, timestamp, shoulder_angle, spine_angle, compliant
+
+# Calculate employee stats
+stats = data.groupby('employee_id').agg({
+    'timestamp': ['count', 'max'],
+    'compliant': 'sum'
+})
+stats['sitting_time_hours'] = stats['timestamp']['max'] / 3600
+stats['correct_posture_hours'] = stats['compliant']['sum'] / 3600
+stats['compliance_rate'] = stats['correct_posture_hours'] / stats['sitting_time_hours'] * 100
+stats['points'] = stats['correct_posture_hours'] * 1  # 1 point per compliant hour
+
+# Estimate business impact
+avg_compliance = stats['compliance_rate'].mean()
+analytics = pd.DataFrame({
+    'avg_compliance': [avg_compliance],
+    'potential_reductions': [
+        "Absenteeism (fewer sick days), healthcare costs, furniture wear, workers' compensation claims, employee turnover, legal liabilities, productivity losses"
+    ]
+})
+
+# Save data
+analytics.to_csv('business_analytics.csv')
+stats.to_csv('employee_stats.csv')
+            </div>
+            <p class="text-gray-300 mt-4">
+                <span class="highlight">Potential Reductions:</span> Improved posture may reduce absenteeism, healthcare costs, furniture replacement, workers’ compensation claims, turnover, legal liabilities, and productivity losses, enhancing overall company performance.
+            </p>
+        </div>
+
+        <!-- Step 4: Update Dashboards -->
+        <div class="step-card">
+            <div class="flow-title">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17V7m0 10h6m-6 0H3m12 0h6M9 7h6M3 7h6m6 0h6" />
+                </svg>
+                <h2 class="text-2xl font-semibold text-white mb-4">Step 4: Visualize Success with Dashboards</h2>
+            </div>
+            <p class="text-gray-300 mb-4">
+                Selenium updates employee and HR dashboards, displaying stats, points, and potential business benefits, fostering transparency and engagement.
+            </p>
+            <div class="code-snippet">
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+import pandas as pd
+
+# Load stats and analytics
+stats = pd.read_csv('employee_stats.csv')
+analytics = pd.read_csv('business_analytics.csv')
+
+driver = webdriver.Chrome()
+driver.get('https://intranet.example.com/login')
+driver.find_element(By.ID, 'username').send_keys('admin')
+driver.find_element(By.ID, 'password').send_keys('password')
+driver.find_element(By.ID, 'login').click()
+
+# Update employee dashboards
+for index, row in stats.iterrows():
+    driver.get(f'https://intranet.example.com/dashboard/{row["employee_id"]}')
+    driver.find_element(By.ID, 'points').clear()
+    driver.find_element(By.ID, 'points').send_keys(str(row['points']))
+    driver.find_element(By.ID, 'sitting_time').clear()
+    driver.find_element(By.ID, 'sitting_time').send_keys(f"{row['sitting_time_hours']:.1f} hours")
+    driver.find_element(By.ID, 'posture_time').clear()
+    driver.find_element(By.ID, 'posture_time').send_keys(f"{row['correct_posture_hours']:.1f} hours")
+    driver.find_element(By.ID, 'compliance').clear()
+    driver.find_element(By.ID, 'compliance').send_keys(f"{row['compliance_rate']:.1f}%")
+    driver.find_element(By.ID, 'update').click()
+
+# Update HR dashboard
+driver.get('https://intranet.example.com/hr-analytics')
+driver.find_element(By.ID, 'reductions').clear()
+driver.find_element(By.ID, 'reductions').send_keys(analytics['potential_reductions'][0])
+driver.find_element(By.ID, 'update').click()
+
+driver.quit()
+            </div>
+            <p class="text-gray-300 mt-4">
+                <span class="highlight">Story Impact:</span> Dashboards visualize employee progress and potential savings, empowering HR to drive wellness initiatives.
+            </p>
+        </div>
+
+        <!-- Step 5: Automate Notifications -->
+        <div class="step-card">
+            <div class="flow-title">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                </svg>
+                <h2 class="text-2xl font-semibold text-white mb-4">Step 5: Automate Engagement and Reporting</h2>
+            </div>
+            <p class="text-gray-300 mb-4">
+                Power Automate sends posture alerts, reward messages with stats, and analytics reports to HR, highlighting potential cost reductions.
+            </p>
+            <p class="text-gray-300 mb-4">
+                <span class="highlight">Example Flow:</span> Trigger: New posture data. Actions: If non-compliant, send Teams alert. Weekly: Email reward messages and analytics on potential savings.
+            </p>
+            <p class="text-gray-300">
+                <span class="highlight">Story Impact:</span> Automation ensures timely interventions and informs HR of potential savings, reducing manual oversight.
+            </p>
+        </div>
+
+        <!-- Step 6: AI Chaining -->
+        <div class="step-card">
+            <div class="flow-title">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                </svg>
+                <h2 class="text-2xl font-semibold text-white mb-4">Step 6: Unite Tools for Maximum Impact</h2>
+            </div>
+            <p class="text-gray-300 mb-4">
+                AI chaining integrates MediaPipe, Grok, Pandas, Selenium, and Power Automate, delivering a seamless system with stats-driven rewards and analytics for potential savings.
+            </p>
+            <div class="code-snippet">
+import pandas as pd
+import requests
+
+# Analyze posture data
+data = pd.read_csv('posture_data.csv')
+stats = data.groupby('employee_id').agg({
+    'timestamp': 'max',
+    'compliant': 'sum'
+})
+stats['sitting_time_hours'] = stats['timestamp']['max'] / 3600
+stats['correct_posture_hours'] = stats['compliant']['sum'] / 3600
+stats['compliance_rate'] = stats['correct_posture_hours'] / stats['sitting_time_hours'] * 100
+avg_compliance = stats['compliance_rate'].mean()
+
+# Generate HR report with Grok
+prompt = f"Generate a 50-word HR report: {avg_compliance:.1f}% average posture compliance may reduce absenteeism, healthcare costs, furniture wear, workers' compensation claims, employee turnover, legal liabilities, and productivity losses."
+response = requests.post('https://api.x.ai/grok', json={'prompt': prompt}).json()
+print(response['report'])
+            </div>
+            <p class="text-gray-300 mt-4">
+                <span class="highlight">Story Impact:</span> AI chaining creates a powerful OH&S ecosystem, driving engagement and potential cost reductions across multiple business areas.
+            </p>
+        </div>
+
+        <!-- Conclusion -->
+        <div class="step-card">
+            <div class="flow-title">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <h2 class="text-2xl font-semibold text-white mb-4">The Outcome: A Healthier, Cost-Effective Workplace</h2>
+            </div>
+            <p class="text-gray-300">
+                This OH&S system, powered by <span class="highlight">ChatGPT</span> and <span class="highlight">Grok</span> for personalized messages and reports, <span class="highlight">MediaPipe</span> for tracking, <span class="highlight">Pandas</span> for analytics, <span class="highlight">Selenium</span> for dashboards, and <span class="highlight">Power Automate</span> for automation, transforms workplace wellness. It offers potential reductions in absenteeism, healthcare costs, furniture replacement, workers’ compensation claims, turnover, legal liabilities, and productivity losses. Your innovative perspective from self-directed learning outside the workplace delivers a scalable, engaging solution, unlocking new avenues for cost-effective OH&S and enhanced company performance.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
