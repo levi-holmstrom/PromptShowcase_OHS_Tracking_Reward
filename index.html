@@ -3,459 +3,321 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OH&S Posture Rewards & Analytics System</title>
+    <title>AI-Powered Cost-Effective Solutions Showcase</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/heroicons/2.0.18/outline.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
+        /* Base styles */
         body {
             font-family: 'Inter', sans-serif;
             background-color: #1a1a1a;
             color: #e5e7eb;
-        }
-        .section {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 3rem 1rem;
-        }
-        .prompt-card {
-            background-color: #2d2d2d;
-            border-radius: 0.75rem;
-            padding: 2rem;
-            margin-bottom: 3rem;
-            border: 1px solid #10b981;
-        }
-        .step-card {
-            background-color: #2d2d2d;
-            border-radius: 0.75rem;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            position: relative;
-        }
-        .step-card::after {
-            content: '';
-            display: block;
-            width: 2px;
-            height: 40px;
-            background-color: #10b981;
-            position: absolute;
-            bottom: -40px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-        .step-card:last-child::after {
-            display: none;
-        }
-        .code-snippet {
-            background-color: #1f2937;
-            color: #e5e7eb;
-            padding: 1.5rem;
-            border-radius: 0.5rem;
-            font-family: 'Courier New', monospace;
-            overflow-x: auto;
-            white-space: pre-wrap;
         }
         .highlight {
             color: #10b981;
             font-weight: bold;
         }
         .icon {
-            width: 2rem;
-            height: 2rem;
+            width: 1.75rem;
+            height: 1.75rem;
             color: #10b981;
-            margin-right: 1rem;
+            margin-right: 0.75rem;
+            flex-shrink: 0;
         }
         .flow-title {
             display: flex;
             align-items: center;
         }
+        
+        /* Layout and Card Styling for proper alignment */
+        .department-panel {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem; /* Space between cards */
+            width: 100%;
+        }
+
+        .prompt-card, .step-card {
+            background-color: #2d2d2d;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .prompt-card {
+            border: 1px solid #10b981;
+        }
+        
         .prompt-content ul {
             list-style-type: disc;
-            margin-left: 2rem;
+            padding-left: 1.5rem;
             margin-bottom: 1rem;
+            font-size: 12px;
+
         }
-        .prompt-content ul ul {
-            list-style-type: circle;
-            margin-left: 2rem;
+
+        .code-snippet {
+            background-color: #1f2937;
+            color: #e5e7eb;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            font-size: 0.8rem;
+            margin-top: 0.75rem;
         }
-        .prompt-content strong {
-            color: #10b981;
+
+        /* Connector line styling */
+        .step-card-wrapper {
+            position: relative;
+            padding-bottom: 2.5rem; /* Space for the connector */
         }
+        .step-card-wrapper:last-child {
+            padding-bottom: 0; /* No space for connector on the last card */
+        }
+        .step-card-wrapper::after {
+            content: '';
+            display: block;
+            width: 2px;
+            height: 2rem; /* Height of the connector */
+            background-color: #10b981;
+            position: absolute;
+            bottom: -6px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .step-card-wrapper:last-child::after {
+            display: none; /* Hide connector on the last card */
+        }
+
     </style>
 </head>
-<body>
-    <div class="section">
-        <!-- Prompt Section -->
-        <div class="prompt-card">
-            <div class="flow-title">
-                <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-3-3v6m-9 3h18a2 2 0 002-2V6a2 2 0 00-2-2H3a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                <h2 class="text-2xl font-semibold text-white mb-4">Prompt Used to Generate This Showcase</h2>
+<body class="bg-gray-900 text-gray-200 p-4 md:p-8">
+
+    <header class="text-center mb-12">
+        <h1 class="text-4xl md:text-5xl font-bold text-white">AI-Powered Solutions Across the Enterprise</h1>
+        <p class="text-lg text-gray-400 mt-4 max-w-4xl mx-auto">A strategic overview of cost-effective, AI-driven automations for every department in a Software Testing Company.</p>
+    </header>
+
+    <!-- Main Grid Container -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-12">
+
+        <!-- Column 1: OH&S Department -->
+        <div class="department-panel">
+            <h2 class="text-2xl font-bold text-center mb-2 text-white border-b-2 border-emerald-500 pb-2">OH&S Department</h2>
+            <div class="prompt-card">
+                <div class="flow-title">
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-3-3v6m-9 3h18a2 2 0 002-2V6a2 2 0 00-2-2H3a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                    <h3 class="text-lg font-semibold text-white">Upgraded Master Prompt</h3>
+                </div>
+                <div class="prompt-content text-gray-300 text-sm mt-2">
+                    <p>Create an <span class="highlight">AI-Powered Ergonomic & Environmental Safety Auditor</span>. This system will evolve beyond personal posture to analyze the entire workstation and immediate office environment, incorporating official OH&S guidelines.</p>
+                    <ul><li><strong>Tech:</strong> MediaPipe, Object Detection (YOLO/Detectron2), LLM, Pandas, IoT integration, Power Automate.</li><li><strong>Focus:</strong> Analyze posture, workstation setup (glare, clutter), and environmental factors (air quality, trip hazards).</li><li><strong>Analytics:</strong> Provide holistic safety scores, identify systemic risks, and offer data-driven recommendations for environmental improvements.</li></ul>
+                </div>
             </div>
-            <div class="prompt-content text-gray-300">
-                <p>Create a single-page HTML/CSS web application showcasing an AI-powered Occupational Health and Safety (OH&S) posture-tracking rewards system for desk workers to improve company performance by encouraging ergonomic posture.</p>
-                <ul>
-                    <li><strong>System Overview:</strong>
-                        <ul>
-                            <li><strong>Technologies:</strong>
-                                <ul>
-                                    <li>MediaPipe: Real-time joint tracking (shoulders, elbows, neck) via webcam.</li>
-                                    <li>Grok (xAI API): Posture feedback, ~$0.10-$0.20 per analysis, 0.8 detection confidence threshold.</li>
-                                    <li>Pandas: Calculates employee stats (sitting time, correct posture time, compliance rate, points at 1 point per compliant hour).</li>
-                                    <li>Selenium: Updates intranet dashboards.</li>
-                                    <li>Power Automate: Sends alerts and reward messages.</li>
-                                </ul>
-                            </li>
-                            <li><strong>Focus:</strong> Generate personalized reward messages with ChatGPT, including stats (e.g., sitting time, correct posture time, compliance rate, points) to engage employees.</li>
-                            <li><strong>Business Analytics:</strong> Highlight potential reductions in:
-                                <ul>
-                                    <li>Absenteeism (fewer sick days).</li>
-                                    <li>Healthcare costs.</li>
-                                    <li>Furniture replacement.</li>
-                                    <li>Workers’ compensation claims.</li>
-                                    <li>Employee turnover.</li>
-                                    <li>Legal liabilities.</li>
-                                    <li>Productivity losses.</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><strong>Design Requirements:</strong>
-                        <ul>
-                            <li><strong>Theme:</strong> Modern, dark theme with:
-                                <ul>
-                                    <li>Black background (#1a1a1a).</li>
-                                    <li>White text (#e5e7eb).</li>
-                                    <li>Green accents (#10b981) for highlights.</li>
-                                </ul>
-                            </li>
-                            <li><strong>Styling:</strong> Use Tailwind CSS and Heroicons (outline style) for placeholder icons.</li>
-                            <li><strong>Layout:</strong> Flowchart structure with vertical connecting arrows (2px wide, green) between sections, creating a narrative-driven story.</li>
-                            <li><strong>Section Format:</strong> Each section in a card (background #2d2d2d, rounded corners, shadow) with an icon aligned with the title.</li>
-                        </ul>
-                    </li>
-                    <li><strong>Content Requirements:</strong>
-                        <ul>
-                            <li><strong>Header:</strong>
-                                <ul>
-                                    <li>Title: "The Future of Workplace Wellness: OH&S Posture Rewards".</li>
-                                    <li>Intro: Frame the system as a transformative solution for workplace health and cost savings.</li>
-                                </ul>
-                            </li>
-                            <li><strong>Step 1: Personalized Reward Messages:</strong>
-                                <ul>
-                                    <li>Describe ChatGPT’s role in generating engaging messages with stats (e.g., 6 hours sitting, 5.2 hours correct posture, 87% compliance, 52 points).</li>
-                                    <li>Include example prompt and output, emphasizing motivation and rewards (e.g., $10 gift card).</li>
-                                    <li>Highlight insight: Stats-driven messages boost engagement.</li>
-                                </ul>
-                            </li>
-                            <li><strong>Step 2: Posture Tracking:</strong>
-                                <ul>
-                                    <li>Describe MediaPipe’s real-time joint tracking with 0.8 detection threshold, logging data.</li>
-                                    <li>Include Python code snippet for tracking logic, emphasizing cost efficiency (~$0.10-$0.20 per analysis).</li>
-                                </ul>
-                            </li>
-                            <li><strong>Step 3: Analytics and Rewards:</strong>
-                                <ul>
-                                    <li>Detail Pandas’ role in calculating stats, points, and potential business benefits.</li>
-                                    <li>Include code snippet for analytics, avoiding hard figures.</li>
-                                </ul>
-                            </li>
-                            <li><strong>Step 4: Dashboard Updates:</strong>
-                                <ul>
-                                    <li>Explain Selenium’s role in updating dashboards with stats and business benefits.</li>
-                                    <li>Include code snippet.</li>
-                                </ul>
-                            </li>
-                            <li><strong>Step 5: Automated Notifications:</strong>
-                                <ul>
-                                    <li>Describe Power Automate’s role in sending alerts and reward messages.</li>
-                                    <li>Include example flow.</li>
-                                </ul>
-                            </li>
-                            <li><strong>Step 6: AI Chaining:</strong>
-                                <ul>
-                                    <li>Explain integration of MediaPipe, Grok, Pandas, Selenium, and Power Automate, with Grok generating HR reports on potential savings.</li>
-                                    <li>Include code snippet.</li>
-                                </ul>
-                            </li>
-                            <li><strong>Conclusion:</strong>
-                                <ul>
-                                    <li>Summarize cost reductions and performance improvements, tying to the developer’s innovative perspective from self-directed learning.</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><strong>Narrative:</strong>
-                        <ul>
-                            <li>Frame content as a story, guiding viewers from employee engagement to business impact, emphasizing potential cost reductions and productivity gains.</li>
-                        </ul>
-                    </li>
-                    <li><strong>Technical Notes:</strong>
-                        <ul>
-                            <li>Ensure code snippets are realistic, reflecting MediaPipe’s joint tracking, Pandas’ data processing, Selenium’s automation, and Grok’s API calls.</li>
-                            <li>Highlight subscription model scalability (e.g., supporting 50,000 users) and error handling (e.g., detection threshold to avoid invalid analyses).</li>
-                        </ul>
-                    </li>
-                    <li><strong>Output:</strong>
-                        <ul>
-                            <li>Deliver a complete HTML/CSS file using Tailwind CSS and Heroicons, with a cohesive, modern design that tells a compelling story about the OH&S rewards system’s impact.</li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
+            <!-- Production Cycle -->
+            <div class="step-card-wrapper"><div class="step-card">
+                <div class="flow-title"><svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg><h4 class="text-md font-semibold text-white">1. Advanced Workstation Analysis</h4></div>
+                <p class="text-sm text-gray-400 mt-2">The system uses a webcam to perform a multi-layered analysis: <span class="highlight">Posture Tracking</span> with MediaPipe, <span class="highlight">Glare Detection</span> by identifying bright reflections on the monitor, and <span class="highlight">Desk Clutter</span> analysis using object detection.</p>
+                <div class="code-snippet"># Combined analysis script
+posture_score = get_posture_score(frame)
+glare_score = get_glare_score(frame)
+clutter_score = get_clutter_score(frame)
+total_ergonomic_score = (posture_score * 0.5) + (glare_score * 0.3) + (clutter_score * 0.2)</div>
+            </div></div>
+            <div class="step-card-wrapper"><div class="step-card">
+                <div class="flow-title"><svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7.014A8.003 8.003 0 0121 10c0 3-1.5 7-6 7a8.025 8.025 0 01-3.343-1.343z" /></svg><h4 class="text-md font-semibold text-white">2. Environmental & IoT Integration</h4></div>
+                <p class="text-sm text-gray-400 mt-2">The system connects to office IoT sensors. It correlates <span class="highlight">thermal comfort</span> (temperature) and <span class="highlight">air quality</span> (CO2 levels) with anonymized, aggregate posture data to identify environmental trends affecting employee wellness.</p>
+                <div class="code-snippet">import pandas as pd
+# Correlate posture data with environmental data
+merged_data = pd.merge(posture_df, iot_df, on='timestamp')
+# if temp < 20C and aggregate_hunch_score > 0.8:
+#    print("Insight: Low temps correlate with poor posture.")</div>
+            </div></div>
+            <div class="step-card-wrapper"><div class="step-card">
+                <div class="flow-title"><svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg><h4 class="text-md font-semibold text-white">3. 'Safe Passages' Hazard Detection</h4></div>
+                <p class="text-sm text-gray-400 mt-2">Periodically, the system's object detection model scans the background for common trip hazards like bags, boxes, or cables in walkways, directly addressing slip/trip/fall prevention from the safety guide.</p>
+                <div class="code-snippet"># Simplified object detection logic
+detected_objects = object_detection_model(frame)
+for obj in detected_objects:
+    if obj['label'] in ['bag', 'box'] and obj['location'] == 'walkway':
+        # Flag potential trip hazard
+        send_housekeeping_alert()</div>
+            </div></div>
+            <div class="step-card-wrapper"><div class="step-card">
+                <div class="flow-title"><svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" /></svg><h4 class="text-md font-semibold text-white">4. AI-Driven Nudges & Reports</h4></div>
+                <p class="text-sm text-gray-400 mt-2">Based on the combined data, an LLM generates contextual notifications. Instead of just posture alerts, it sends holistic advice: <span class="highlight">"High glare detected. Try adjusting your blinds to reduce eye strain."</span></p>
+                <div class="code-snippet">prompt = f"Generate a helpful nudge for a user with a glare score of {glare_score} and a clutter score of {clutter_score}."
+# response = model.generate_content(prompt)</div>
+            </div></div>
+            <div class="step-card-wrapper"><div class="step-card">
+                <div class="flow-title"><svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" /></svg><h4 class="text-md font-semibold text-white">5. Full Automation with Power Automate</h4></div>
+                <p class="text-sm text-gray-400 mt-2">Power Automate orchestrates the entire system, triggering analyses, sending alerts for immediate hazards (like walkway obstructions) to a facilities channel, and emailing weekly summary reports to HR and employees.</p>
+            </div></div>
+            <div class="step-card-wrapper"><div class="step-card">
+                <div class="flow-title"><svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg><h4 class="text-md font-semibold text-white">Outcome</h4></div>
+                <p class="text-sm text-gray-400 mt-2">The system transforms from a personal wellness tool into a proactive, automated safety auditor for the entire office, providing data-driven insights to prevent a wider range of OH&S issues.</p>
+            </div></div>
         </div>
 
-        <!-- Main Showcase -->
-        <h1 class="text-4xl font-bold text-center mb-8 text-white">The Future of Workplace Wellness: OH&S Posture Rewards</h1>
-        <p class="text-lg text-gray-400 mb-12 text-center">
-            Imagine a workplace where employees thrive, injuries plummet, and costs shrink—all powered by AI-driven posture tracking and a gamified rewards system. Follow this journey to see how it transforms your business.
-        </p>
-
-        <!-- Step 1: Personalized Reward Messages -->
-        <div class="step-card">
-            <div class="flow-title">
-                <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
-                </svg>
-                <h2 class="text-2xl font-semibold text-white mb-4">Step 1: Engage Employees with Personalized Rewards</h2>
+        <!-- Column 2: Quality Assurance -->
+        <div class="department-panel">
+            <h2 class="text-2xl font-bold text-center mb-2 text-white border-b-2 border-emerald-500 pb-2">Quality Assurance</h2>
+            <div class="prompt-card">
+                 <div class="flow-title">
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-3-3v6m-9 3h18a2 2 0 002-2V6a2 2 0 00-2-2H3a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                    <h3 class="text-lg font-semibold text-white">Upgraded Master Prompt</h3>
+                </div>
+                <div class="prompt-content text-gray-300 text-sm mt-2">
+                    <p>Create an <span class="highlight">AI-Powered Code Generation & Adversarial Auditing System</span>. This dual-agent system generates functional code and then proactively attempts to find security, ethical, and logical flaws, creating a self-regulating development loop.</p>
+                    <ul><li><strong>Tech:</strong> Dual LLM Agents (Developer & Red Team QA), Python, Static Analysis Tools, Power Automate, Jira API.</li><li><strong>Focus:</strong> Move beyond test generation to a cycle of code creation, adversarial testing (security, bias, robustness), and automated refinement.</li><li><strong>Analytics:</strong> Reduce vulnerabilities and bugs before human review, ensure ethical compliance, and produce highly robust, self-validated code, drastically cutting down on long-term maintenance costs.</li></ul>
+                </div>
             </div>
-            <p class="text-gray-300 mb-4">
-                ChatGPT crafts personalized reward messages using employee stats like sitting time, correct posture time, and compliance rate, making every worker feel valued and motivated to stay ergonomic.
-            </p>
-            <p class="text-gray-300 mb-4">
-                <span class="highlight">Example Prompt:</span> "Write a 100-word email for [Employee Name] who sat for 6 hours, maintained correct posture for 5.2 hours, achieved 87% compliance, and earned 52 points. Use a friendly tone and mention rewards like a $10 gift card."
-            </p>
-            <p class="text-gray-300">
-                <span class="highlight">Example Output:</span> "Hey [Employee Name], You're killing it! This week, you sat for 6 hours, nailed perfect posture for 5.2 hours (87% compliance), and racked up 52 points—enough for a $10 gift card! Keep rocking that ergonomic vibe to stay healthy and earn more perks!"
-            </p>
-            <p class="text-gray-300">
-                <span class="highlight">Story Impact:</span> Personalized messages boost engagement, fostering a culture of wellness and reducing posture-related complaints.
-            </p>
+            <!-- Production Cycle -->
+            <div class="step-card-wrapper"><div class="step-card">
+                <div class="flow-title"><svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg><h4 class="text-md font-semibold text-white">1. Ingest Requirements & Generate Code</h4></div>
+                <p class="text-sm text-gray-400 mt-2">A "Developer Agent" receives a user story and generates the initial Python code to meet the functional requirements, including docstrings and basic error handling.</p>
+                <div class="code-snippet"># Initial prompt for Developer Agent
+prompt = f"Write a Python function that takes a user ID and returns their profile from a database. Handle potential database errors."
+# generated_code = developer_agent.generate(prompt)</div>
+            </div></div>
+            <div class="step-card-wrapper"><div class="step-card">
+                <div class="flow-title"><svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg><h4 class="text-md font-semibold text-white">2. Generate Standard Unit Tests</h4></div>
+                <p class="text-sm text-gray-400 mt-2">The agent generates a standard suite of unit tests (e.g., using PyTest) to verify the code's core functionality, including positive, negative, and edge-case scenarios.</p>
+                <div class="code-snippet">test_prompt = f"Generate PyTest unit tests for the following code: {generated_code}. Include tests for valid IDs, invalid IDs, and database connection failures."
+# standard_tests = developer_agent.generate(test_prompt)</div>
+            </div></div>
+            <div class="step-card-wrapper"><div class="step-card">
+                <div class="flow-title"><svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.343 16c-.77 1.333.192 3 1.732 3z" /></svg><h4 class="text-md font-semibold text-white">3. Adversarial "Red Team" Analysis</h4></div>
+                <p class="text-sm text-gray-400 mt-2">A specialized "Red Team QA Agent" is prompted to find flaws. It generates adversarial tests focusing on <span class="highlight">security</span> (e.g., simulated prompt injection on the function's inputs), <span class="highlight">robustness</span> (e.g., unexpected data types), and <span class="highlight">ethical bias</span>.</p>
+                <div class="code-snippet">red_team_prompt = f"""
+Act as a security auditor. Analyze this code: {generated_code}.
+Generate tests that could expose vulnerabilities like SQL injection or cause unexpected crashes. Check for any potential biases in error messaging.
+"""
+# adversarial_tests = red_team_agent.generate(red_team_prompt)</div>
+            </div></div>
+            <div class="step-card-wrapper"><div class="step-card">
+                <div class="flow-title"><svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h5V4H4zm0 0L9 9m-5 5v5h5v-5H4zm0 0L9 14m5-5v5h5V9h-5zm0 0l5-5M14 14v5h5v-5h-5zm0 0l5 5" /></svg><h4 class="text-md font-semibold text-white">4. Automated Refinement Loop</h4></div>
+                <p class="text-sm text-gray-400 mt-2">The system executes all tests. If any fail, the failing test case and error message are fed back to the "Developer Agent" with an instruction to fix the code. This loop continues until all standard and adversarial tests pass.</p>
+                <div class="code-snippet"># Automated feedback loop
+if test_results.failed:
+    fix_prompt = f"Your code failed this test: {failed_test}. The error was: {error_msg}. Please fix the original code."
+    # refined_code = developer_agent.generate(fix_prompt)</div>
+            </div></div>
+            <div class="step-card-wrapper"><div class="step-card">
+                <div class="flow-title"><svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg><h4 class="text-md font-semibold text-white">5. Final Report & Jira Integration</h4></div>
+                <p class="text-sm text-gray-400 mt-2">Once validated, the system generates a comprehensive report with the final code, all tests, and the adversarial audit results. Power Automate then creates a Jira ticket with this information for human review and approval.</p>
+            </div></div>
+            <div class="step-card-wrapper"><div class="step-card">
+                <div class="flow-title"><svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg><h4 class="text-md font-semibold text-white">Outcome</h4></div>
+                <p class="text-sm text-gray-400 mt-2">The QA process shifts from post-development validation to a pre-emptive, self-regulating system that produces hardened, secure, and reliable code from the start, significantly reducing long-term technical debt and security risks.</p>
+            </div></div>
         </div>
 
-        <!-- Step 2: Real-Time Posture Tracking -->
-        <div class="step-card">
-            <div class="flow-title">
-                <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                </svg>
-                <h2 class="text-2xl font-semibold text-white mb-4">Step 2: Monitor Posture with Precision</h2>
+        <!-- Column 3: Sales & Marketing -->
+        <div class="department-panel">
+            <h2 class="text-2xl font-bold text-center mb-2 text-white border-b-2 border-emerald-500 pb-2">Sales & Marketing</h2>
+            <div class="prompt-card">
+                <div class="flow-title">
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-3-3v6m-9 3h18a2 2 0 002-2V6a2 2 0 00-2-2H3a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                    <h3 class="text-lg font-semibold text-white">Upgraded Master Prompt</h3>
+                </div>
+                <div class="prompt-content text-gray-300 text-sm mt-2">
+                    <p>Develop an <span class="highlight">AI-Powered Hyper-Personalization & Market Research Engine</span>. This agent-based system moves beyond simple lead scoring to create dynamic customer personas, simulate willingness-to-pay, generate multi-touchpoint outreach campaigns, and analyze sales call transcripts for continuous improvement.</p>
+                    <ul><li><strong>Tech:</strong> LLM API, Python, Pandas, Power Automate, CRM Integration (e.g., HubSpot), Speech-to-Text (e.g., Otter.ai).</li><li><strong>Focus:</strong> Create a deep, real-time understanding of individual leads to tailor the entire sales journey, from initial contact to final proposal.</li><li><strong>Analytics:</strong> Drastically increase lead conversion rates, shorten the sales cycle, and provide predictive insights into which product features resonate most with specific market segments.</li></ul>
+                </div>
             </div>
-            <p class="text-gray-300 mb-4">
-                MediaPipe tracks joint positions in real-time via webcam, logging data for analysis. Grok provides feedback, ensuring employees maintain optimal angles with minimal API costs.
-            </p>
-            <div class="code-snippet">
-import mediapipe as mp
-import cv2
-import time
+            <!-- Production Cycle -->
+            <div class="step-card-wrapper"><div class="step-card">
+                <div class="flow-title"><svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg><h4 class="text-md font-semibold text-white">1. AI-Powered Persona Generation</h4></div>
+                <p class="text-sm text-gray-400 mt-2">When a "Hot" lead is identified, the system prompts an LLM to create a detailed, narrative-driven persona. It synthesizes the lead's role, company, industry, and inquiry to infer their primary pain points, goals, and communication style.</p>
+                <div class="code-snippet">prompt = f"""
+Based on this lead data, create a detailed persona:
+- Name: {lead['Name']}, Role: {lead['Role']}, Company: {lead['Company']}
+- Inquiry: "{lead['Inquiry']}"
+Generate their likely business challenges, primary goals, and preferred communication style (e.g., formal, data-driven, casual).
+"""
+# persona_details = model.generate_content(prompt)</div>
+            </div></div>
+            <div class="step-card-wrapper"><div class="step-card">
+                <div class="flow-title"><svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" /></svg><h4 class="text-md font-semibold text-white">2. Predictive Willingness-to-Pay (WTP)</h4></div>
+                <p class="text-sm text-gray-400 mt-2">Drawing from market research principles, the agent runs a simulated conjoint analysis. It prompts the LLM (acting as the persona) with different service packages at various price points to estimate the lead's WTP for specific features.</p>
+                <div class="code-snippet"># Simplified WTP simulation
+wtp_prompt = f"""
+You are {persona['Name']}. Given your goals, choose between:
+1. Basic Plan at $5k/mo: Core features.
+2. Pro Plan at $8k/mo: Core features + advanced analytics.
+Which do you choose?
+"""
+# choice = model.generate_content(wtp_prompt) -> "Pro Plan"</div>
+            </div></div>
+            <div class="step-card-wrapper"><div class="step-card">
+                <div class="flow-title"><svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" /></svg><h4 class="text-md font-semibold text-white">3. Generate Hyper-Personalized Outreach Cadence</h4></div>
+                <p class="text-sm text-gray-400 mt-2">Using the persona and WTP insights, the agent generates a complete, multi-step outreach campaign. This includes a personalized initial email, a follow-up message, and a script for a sales call that focuses on the features the lead values most.</p>
+                <div class="code-snippet">cadence_prompt = f"Create a 3-step outreach cadence for {persona['Name']}. The initial email should focus on their pain point of '{persona['Challenge']}' and highlight the value of our Pro Plan, which they are likely willing to pay for."
+# outreach_plan = model.generate_content(cadence_prompt)</div>
+            </div></div>
+            <div class="step-card-wrapper"><div class="step-card">
+                <div class="flow-title"><svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a2 2 0 01-2 2H6a2 2 0 01-2-2V4z" /></svg><h4 class="text-md font-semibold text-white">4. Sales Call Transcript Analysis</h4></div>
+                <p class="text-sm text-gray-400 mt-2">After a human sales call, the transcript (from a tool like Otter.ai) is fed back to the agent. The LLM analyzes the conversation to extract key objections, new pain points, and buying signals, automatically updating the CRM and the lead's persona.</p>
+                <div class="code-snippet">analysis_prompt = f"Analyze this sales call transcript. What were the main objections? What features did the prospect seem most interested in? Update the persona profile."
+# transcript_insights = model.generate_content(analysis_prompt)</div>
+            </div></div>
+            <div class="step-card-wrapper"><div class="step-card">
+                <div class="flow-title"><svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg><h4 class="text-md font-semibold text-white">Outcome</h4></div>
+                <p class="text-sm text-gray-400 mt-2">The sales process is transformed from a generic funnel into a series of highly personalized, intelligent interactions. Sales reps engage leads with unprecedented insight, leading to shorter sales cycles, higher conversion rates, and a deep understanding of market needs.</p>
+            </div></div>
+        </div>
 
-mp_pose = mp.solutions.pose
-pose = mp_pose.Pose(min_detection_confidence=0.8)
-
-cap = cv2.VideoCapture(0)
-start_time = time.time()
-posture_log = []
-
-while cap.isOpened():
-    ret, frame = cap.read()
-    if not ret:
-        break
-    image = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-    results = pose.process(image)
-    
-    if results.pose_landmarks:
-        landmarks = results.pose_landmarks.landmark
-        shoulder_angle = calculate_angle(landmarks[mp_pose.PoseLandmark.LEFT_SHOULDER],
-                                        landmarks[mp_pose.PoseLandmark.LEFT_ELBOW],
-                                        landmarks[mp_pose.PoseLandmark.LEFT_WRIST])
-        spine_angle = calculate_spine_angle(landmarks)
-        current_time = time.time() - start_time
-        is_compliant = shoulder_angle >= 80 and shoulder_angle <= 100 and abs(spine_angle) <= 10
-        posture_log.append({'timestamp': current_time, 'shoulder_angle': shoulder_angle, 
-                           'spine_angle': spine_angle, 'compliant': is_compliant})
+        <!-- Column 4: Finance & Accounting -->
+        <div class="department-panel">
+            <h2 class="text-2xl font-bold text-center mb-2 text-white border-b-2 border-emerald-500 pb-2">Finance & Accounting</h2>
+            <div class="prompt-card">
+                 <div class="flow-title">
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-3-3v6m-9 3h18a2 2 0 002-2V6a2 2 0 00-2-2H3a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                    <h3 class="text-lg font-semibold text-white">Upgraded Master Prompt</h3>
+                </div>
+                <div class="prompt-content text-gray-300 text-sm mt-2">
+                    <p>Develop an <span class="highlight">AI-Powered Governance & Alpha Agent</span>. This system moves beyond simple expense auditing to proactively analyze financial data, generate novel cost-saving and investment strategies ("alpha factors"), and provide explainable, risk-assessed reports for strategic decision-making.</p>
+                    <ul><li><strong>Tech:</strong> LLM API, Python, Pandas, Scikit-learn, Power Automate.</li><li><strong>Focus:</strong> Automate compliance checks, generate novel financial strategies from unstructured data (reports, news), and provide "Chain-of-Thought" reasoning for explainability.</li><li><strong>Analytics:</strong> Shift from reactive fraud detection to proactive financial strategy, identifying new revenue streams or cost-saving opportunities while ensuring robust governance.</li></ul>
+                </div>
+            </div>
+            <!-- Production Cycle -->
+            <div class="step-card-wrapper"><div class="step-card">
+                <div class="flow-title"><svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3h9M9 4h6" /></svg><h4 class="text-md font-semibold text-white">1. Ingest Financial & Market Data</h4></div>
+                <p class="text-sm text-gray-400 mt-2">The agent continuously ingests a wide range of data: internal expense reports, company financial statements, regulatory filings, and external market news, creating a comprehensive knowledge base.</p>
+            </div></div>
+            <div class="step-card-wrapper"><div class="step-card">
+                <div class="flow-title"><svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg><h4 class="text-md font-semibold text-white">2. AI-Driven "Alpha Factor" Generation</h4></div>
+                <p class="text-sm text-gray-400 mt-2">The LLM agent analyzes the combined dataset to identify novel patterns and propose cost-saving strategies or investment ideas ("alpha factors"), moving beyond simple anomaly detection.</p>
+                <div class="code-snippet">prompt = """
+Analyze the latest quarterly reports and market news.
+Generate three novel, data-driven hypotheses for improving our operational efficiency or identifying a new market opportunity.
+Provide the reasoning for each.
+"""
+# alpha_ideas = model.generate_content(prompt)</div>
+            </div></div>
+            <div class="step-card-wrapper"><div class="step-card">
+                <div class="flow-title"><svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 20.417l4.5-4.5M12 14a2 2 0 100-4 2 2 0 000 4z" /></svg><h4 class="text-md font-semibold text-white">3. Automated Risk & Explainability</h4></div>
+                <p class="text-sm text-gray-400 mt-2">For each proposed strategy, the agent performs a risk assessment and provides an explanation of its reasoning using a "Chain-of-Thought" process, ensuring decisions are transparent and auditable as per the ESMA report's recommendations.</p>
+                <div class="code-snippet"># For each idea from the previous step...
+risk_prompt = f"Assess the potential risks (market, operational, compliance) for the following strategy: {idea}. Provide a confidence score."
+# risk_assessment = model.generate_content(risk_prompt)</div>
+            </div></div>
+            <div class="step-card-wrapper"><div class="step-card">
+                <div class="flow-title"><svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg><h4 class="text-md font-semibold text-white">4. Proactive Governance Reporting</h4></div>
+                <p class="text-sm text-gray-400 mt-2">The agent compiles its findings into a strategic brief for the CFO, including the proposed alpha factors, risk assessments, and explainability traces. This is automated via Power Automate.</p>
+            </div></div>
+            <div class="step-card-wrapper"><div class="step-card">
+                <div class="flow-title"><svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg><h4 class="text-md font-semibold text-white">Outcome</h4></div>
+                <p class="text-sm text-gray-400 mt-2">The Finance department transforms from a reactive, cost-auditing center to a proactive, strategic hub that generates novel, data-driven financial strategies, directly contributing to the company's bottom line.</p>
+            </div></div>
+        </div>
         
-        if not is_compliant:
-            cv2.putText(frame, "Adjust posture: Elbows at 90°, spine straight", (50, 50), 
-                        cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
-    
-    cv2.imshow('Posture Tracker', frame)
-    if cv2.waitKey(1) & 0xFF == ord('q'):
-        break
-
-cap.release()
-cv2.destroyAllWindows()
-            </div>
-            <p class="text-gray-300 mt-4">
-                <span class="highlight">Story Impact:</span> Precise tracking (0.8 detection threshold, as in your gym app) ensures reliable data, reducing injury risks and setting the stage for analytics.
-            </p>
-        </div>
-
-        <!-- Step 3: Analytics for Rewards and Business Impact -->
-        <div class="step-card">
-            <div class="flow-title">
-                <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-                </svg>
-                <h2 class="text-2xl font-semibold text-white mb-4">Step 3: Calculate Rewards and Business Impact</h2>
-            </div>
-            <p class="text-gray-300 mb-4">
-                Pandas analyzes posture data to calculate employee stats (sitting time, correct posture time, points) and estimate potential cost reductions in multiple areas.
-            </p>
-            <div class="code-snippet">
-import pandas as pd
-
-# Load posture data
-data = pd.read_csv('posture_data.csv')  # Columns: employee_id, timestamp, shoulder_angle, spine_angle, compliant
-
-# Calculate employee stats
-stats = data.groupby('employee_id').agg({
-    'timestamp': ['count', 'max'],
-    'compliant': 'sum'
-})
-stats['sitting_time_hours'] = stats['timestamp']['max'] / 3600
-stats['correct_posture_hours'] = stats['compliant']['sum'] / 3600
-stats['compliance_rate'] = stats['correct_posture_hours'] / stats['sitting_time_hours'] * 100
-stats['points'] = stats['correct_posture_hours'] * 1  # 1 point per compliant hour
-
-# Estimate business impact
-avg_compliance = stats['compliance_rate'].mean()
-analytics = pd.DataFrame({
-    'avg_compliance': [avg_compliance],
-    'potential_reductions': [
-        "Absenteeism (fewer sick days), healthcare costs, furniture wear, workers' compensation claims, employee turnover, legal liabilities, productivity losses"
-    ]
-})
-
-# Save data
-analytics.to_csv('business_analytics.csv')
-stats.to_csv('employee_stats.csv')
-            </div>
-            <p class="text-gray-300 mt-4">
-                <span class="highlight">Potential Reductions:</span> Improved posture may reduce absenteeism, healthcare costs, furniture replacement, workers’ compensation claims, turnover, legal liabilities, and productivity losses, enhancing overall company performance.
-            </p>
-        </div>
-
-        <!-- Step 4: Update Dashboards -->
-        <div class="step-card">
-            <div class="flow-title">
-                <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17V7m0 10h6m-6 0H3m12 0h6M9 7h6M3 7h6m6 0h6" />
-                </svg>
-                <h2 class="text-2xl font-semibold text-white mb-4">Step 4: Visualize Success with Dashboards</h2>
-            </div>
-            <p class="text-gray-300 mb-4">
-                Selenium updates employee and HR dashboards, displaying stats, points, and potential business benefits, fostering transparency and engagement.
-            </p>
-            <div class="code-snippet">
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-import pandas as pd
-
-# Load stats and analytics
-stats = pd.read_csv('employee_stats.csv')
-analytics = pd.read_csv('business_analytics.csv')
-
-driver = webdriver.Chrome()
-driver.get('https://intranet.example.com/login')
-driver.find_element(By.ID, 'username').send_keys('admin')
-driver.find_element(By.ID, 'password').send_keys('password')
-driver.find_element(By.ID, 'login').click()
-
-# Update employee dashboards
-for index, row in stats.iterrows():
-    driver.get(f'https://intranet.example.com/dashboard/{row["employee_id"]}')
-    driver.find_element(By.ID, 'points').clear()
-    driver.find_element(By.ID, 'points').send_keys(str(row['points']))
-    driver.find_element(By.ID, 'sitting_time').clear()
-    driver.find_element(By.ID, 'sitting_time').send_keys(f"{row['sitting_time_hours']:.1f} hours")
-    driver.find_element(By.ID, 'posture_time').clear()
-    driver.find_element(By.ID, 'posture_time').send_keys(f"{row['correct_posture_hours']:.1f} hours")
-    driver.find_element(By.ID, 'compliance').clear()
-    driver.find_element(By.ID, 'compliance').send_keys(f"{row['compliance_rate']:.1f}%")
-    driver.find_element(By.ID, 'update').click()
-
-# Update HR dashboard
-driver.get('https://intranet.example.com/hr-analytics')
-driver.find_element(By.ID, 'reductions').clear()
-driver.find_element(By.ID, 'reductions').send_keys(analytics['potential_reductions'][0])
-driver.find_element(By.ID, 'update').click()
-
-driver.quit()
-            </div>
-            <p class="text-gray-300 mt-4">
-                <span class="highlight">Story Impact:</span> Dashboards visualize employee progress and potential savings, empowering HR to drive wellness initiatives.
-            </p>
-        </div>
-
-        <!-- Step 5: Automate Notifications -->
-        <div class="step-card">
-            <div class="flow-title">
-                <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
-                </svg>
-                <h2 class="text-2xl font-semibold text-white mb-4">Step 5: Automate Engagement and Reporting</h2>
-            </div>
-            <p class="text-gray-300 mb-4">
-                Power Automate sends posture alerts, reward messages with stats, and analytics reports to HR, highlighting potential cost reductions.
-            </p>
-            <p class="text-gray-300 mb-4">
-                <span class="highlight">Example Flow:</span> Trigger: New posture data. Actions: If non-compliant, send Teams alert. Weekly: Email reward messages and analytics on potential savings.
-            </p>
-            <p class="text-gray-300">
-                <span class="highlight">Story Impact:</span> Automation ensures timely interventions and informs HR of potential savings, reducing manual oversight.
-            </p>
-        </div>
-
-        <!-- Step 6: AI Chaining -->
-        <div class="step-card">
-            <div class="flow-title">
-                <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                </svg>
-                <h2 class="text-2xl font-semibold text-white mb-4">Step 6: Unite Tools for Maximum Impact</h2>
-            </div>
-            <p class="text-gray-300 mb-4">
-                AI chaining integrates MediaPipe, Grok, Pandas, Selenium, and Power Automate, delivering a seamless system with stats-driven rewards and analytics for potential savings.
-            </p>
-            <div class="code-snippet">
-import pandas as pd
-import requests
-
-# Analyze posture data
-data = pd.read_csv('posture_data.csv')
-stats = data.groupby('employee_id').agg({
-    'timestamp': 'max',
-    'compliant': 'sum'
-})
-stats['sitting_time_hours'] = stats['timestamp']['max'] / 3600
-stats['correct_posture_hours'] = stats['compliant']['sum'] / 3600
-stats['compliance_rate'] = stats['correct_posture_hours'] / stats['sitting_time_hours'] * 100
-avg_compliance = stats['compliance_rate'].mean()
-
-# Generate HR report with Grok
-prompt = f"Generate a 50-word HR report: {avg_compliance:.1f}% average posture compliance may reduce absenteeism, healthcare costs, furniture wear, workers' compensation claims, employee turnover, legal liabilities, and productivity losses."
-response = requests.post('https://api.x.ai/grok', json={'prompt': prompt}).json()
-print(response['report'])
-            </div>
-            <p class="text-gray-300 mt-4">
-                <span class="highlight">Story Impact:</span> AI chaining creates a powerful OH&S ecosystem, driving engagement and potential cost reductions across multiple business areas.
-            </p>
-        </div>
-
-        <!-- Conclusion -->
-        <div class="step-card">
-            <div class="flow-title">
-                <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                </svg>
-                <h2 class="text-2xl font-semibold text-white mb-4">The Outcome: A Healthier, Cost-Effective Workplace</h2>
-            </div>
-            <p class="text-gray-300">
-                This OH&S system, powered by <span class="highlight">ChatGPT</span> and <span class="highlight">Grok</span> for personalized messages and reports, <span class="highlight">MediaPipe</span> for tracking, <span class="highlight">Pandas</span> for analytics, <span class="highlight">Selenium</span> for dashboards, and <span class="highlight">Power Automate</span> for automation, transforms workplace wellness. It offers potential reductions in absenteeism, healthcare costs, furniture replacement, workers’ compensation claims, turnover, legal liabilities, and productivity losses. Your innovative perspective from self-directed learning outside the workplace delivers a scalable, engaging solution, unlocking new avenues for cost-effective OH&S and enhanced company performance.
-            </p>
-        </div>
     </div>
+
 </body>
 </html>
